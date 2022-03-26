@@ -1,0 +1,13 @@
+version: '3'
+services:
+  labelstudio:
+    build:
+      context: products/labelstudio
+    environment:
+      - LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK=true
+      - LABEL_STUDIO_USERNAME=admin@admin.fr
+      - LABEL_STUDIO_PASSWORD=k0xw7X2EwUqg
+    ports:
+      - "8080:8080"
+    volumes:
+      - /label-studio/data

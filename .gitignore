@@ -1,0 +1,6 @@
+.vagrant
+scripts/id_rsa.pub
+amazon.ini
+host_vars/amazon.vm
+**.retry
+**.pyc
