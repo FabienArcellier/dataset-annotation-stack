@@ -15,7 +15,7 @@ WORKDIR /app
 
 EXPOSE 5000
 ENV PORT 5000
-ENV CLOUD_STORAGE ""
+#ENV CLOUD_STORAGE ""
 
 RUN rm -rf /app/frontend/node_modules
 

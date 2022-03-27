@@ -7,24 +7,12 @@ services:
       - LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK=true
       - LABEL_STUDIO_USERNAME=admin@admin.fr
       - LABEL_STUDIO_PASSWORD=xxxxxxxxxxxx
+    ports:
+      - "8080:8080"
     volumes:
       - /label-studio/data
   mv_camera:
     build:
       context: products/mv_camera
-    environment:
-      - CLOUD_STORAGE=
-      - AWS_ACCESS_KEY_ID=
-      - AWS_SECRET_ACCESS_KEY=
-  reverse:
-    container_name: reverse
-    hostname: reverse
-    image: nginx
-    environment:
-      - DOMAIN=
     ports:
-      - 5000:5000
-      - 8080:8080
-    volumes:
-      - ./products/reverseproxy:/etc/nginx/templates
-      - /etc/letsencrypt:/etc/letsencrypt
+      - "5000:5000"
