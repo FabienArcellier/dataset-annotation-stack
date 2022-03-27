@@ -1,0 +1,2 @@
+web: FLASK_SPA_PROXY_URL=http://localhost:5100 FLASK_APP=app.webapp:app FLASK_ENV=development flask run
+frontend: cd frontend; npm start

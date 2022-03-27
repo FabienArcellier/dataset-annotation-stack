@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="mv_camera" type="CompoundRunConfigurationType">
+    <toRun name="mv_camera_server" type="PythonConfigurationType" />
+    <toRun name="mv_camera_frontend" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>

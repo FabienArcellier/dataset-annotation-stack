@@ -6,8 +6,17 @@ services:
     environment:
       - LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK=true
       - LABEL_STUDIO_USERNAME=admin@admin.fr
-      - LABEL_STUDIO_PASSWORD=k0xw7X2EwUqg
+      - LABEL_STUDIO_PASSWORD=xxxxxxxxxxxx
     ports:
       - "8080:8080"
     volumes:
       - /label-studio/data
+  mv_camera:
+    build:
+      context: products/mv_camera
+    environment:
+      - CLOUD_STORAGE=
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+    ports:
+      - "5000:5000"

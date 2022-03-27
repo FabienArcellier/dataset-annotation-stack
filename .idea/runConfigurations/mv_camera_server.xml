@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="mv_camera_server" type="PythonConfigurationType" factoryName="Python">
+    <module name="20220326_0654__data-annotation-stack" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="PARENT_ENVS" value="true" />
+    <envs>
+      <env name="PYTHONUNBUFFERED" value="1" />
+      <env name="FLASK_SPA_PROXY_URL" value="http://localhost:5100" />
+      <env name="FLASK_APP" value="app.webapp:app " />
+      <env name="FLASK_ENV" value="development" />
+      <env name="CLOUD_STORAGE" value="s3://615535196854-datalab/datasets/dataset=car_photos/source" />
+    </envs>
+    <option name="SDK_HOME" value="$PROJECT_DIR$/products/mv_camera/.venv/bin/python" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/products/mv_camera" />
+    <option name="IS_MODULE_SDK" value="false" />
+    <option name="ADD_CONTENT_ROOTS" value="true" />
+    <option name="ADD_SOURCE_ROOTS" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/products/mv_camera/.venv/bin/flask" />
+    <option name="PARAMETERS" value="run" />
+    <option name="SHOW_COMMAND_LINE" value="false" />
+    <option name="EMULATE_TERMINAL" value="false" />
+    <option name="MODULE_MODE" value="false" />
+    <option name="REDIRECT_INPUT" value="false" />
+    <option name="INPUT_FILE" value="" />
+    <method v="2" />
+  </configuration>
+</component>
