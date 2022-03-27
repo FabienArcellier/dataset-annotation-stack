@@ -26,6 +26,7 @@ function AppCamera() {
   return (
     <Camera
       idealFacingMode={FACING_MODES.ENVIRONMENT}
+      isImageMirror={false}
       onTakePhoto={(dataUri: string) => {
         handleTakePhoto(dataUri);
       }}
