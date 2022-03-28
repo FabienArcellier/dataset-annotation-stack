@@ -20,15 +20,21 @@ function AppCamera() {
       return r.json()
     }).then(d => {
       notify(d)
-    })
+    }).catch((error) => {
+      notify({type: "danger", "title": "fails to take photo", "message": error})
+    });
   }
 
   return (
     <Camera
       idealFacingMode={FACING_MODES.ENVIRONMENT}
       isImageMirror={false}
+      isMaxResolution={true}
       onTakePhoto={(dataUri: string) => {
         handleTakePhoto(dataUri);
+      }}
+      onCameraError={(error: Error) => {
+        notify({type: "danger", "title": "fails to take photo", "message": error.message})
       }}
     />
   );
