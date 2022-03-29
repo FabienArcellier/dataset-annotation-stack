@@ -30,6 +30,7 @@ function AppCamera() {
       idealFacingMode={FACING_MODES.ENVIRONMENT}
       isImageMirror={false}
       isMaxResolution={true}
+      idealResolution={{width:480, height: 640}}
       onTakePhoto={(dataUri: string) => {
         handleTakePhoto(dataUri);
       }}
