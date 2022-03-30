@@ -25,6 +25,16 @@ services:
     ports:
       - 5000:5000
       - 8080:8080
+      - 9090:9090
     volumes:
       - ./products/reverseproxy:/etc/nginx/templates
       - /etc/letsencrypt:/etc/letsencrypt
+  s3proxy:
+    image: pottava/s3-proxy
+    environment:
+      - AWS_REGION=eu-west-1
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+      - AWS_S3_BUCKET=
+      - AWS_S3_KEY_PREFIX=
+      - DIRECTORY_LISTINGS=true
